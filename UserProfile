@@ -1,0 +1,381 @@
+import 'package:flutter/material.dart';
+
+final Color darkBlue = Color.fromARGB(255, 18, 32, 47);
+
+
+
+void main() {
+  runApp(MyApp());
+}
+
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark().copyWith(scaffoldBackgroundColor: darkBlue),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        body: Center(
+          child: MyWidget(),
+        ),
+      ),
+    );
+  }
+}
+  
+class MyWidget extends StatefulWidget {
+  @override
+  _MyWidgetState createState() => _MyWidgetState();
+}
+
+class _MyWidgetState extends  State<MyWidget> {
+  
+  int _value = 1;
+  
+  @override
+  Widget build(BuildContext context) {
+    return 
+      
+      SingleChildScrollView(
+        child:(
+      // Change password
+      Column(
+        children : [
+      
+      Container(
+        width: 860,
+        child:(
+          Card(
+            child:
+              IntrinsicHeight(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                  width: double.infinity,
+                  child:
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child :  Text(
+                    "Change password",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                    
+                    ),
+                
+                ),
+          Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "Current Password",
+                                icon: Icon(Icons.vpn_key)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "New Password",
+                                icon: Icon(Icons.vpn_key)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "Confirm Password",
+                                icon: Icon(Icons.vpn_key)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                    ),
+                    
+                    Padding(
+                       padding: const EdgeInsets.all(8.0),
+                       child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(100, 50)),
+                               child:  TextButton(
+                                        child: Text('ยืนยันข้อมูล'),
+                                        style: TextButton.styleFrom(
+                                          primary: Colors.white,
+                                          backgroundColor: Colors.teal,
+                                          onSurface: Colors.grey,
+                                        ),
+                                        onPressed: () {
+                                          print('Pressed');
+                               }),
+                            ),
+                       ),
+                     
+                    
+                  ]
+                )
+              )
+          )
+        )
+      ),
+      
+      // Update profile
+      
+      Container(
+     width: 860,
+      child:
+      Card(
+      child:
+     IntrinsicHeight(
+      child: Column(
+        children: [
+          Container(
+                  width: double.infinity,
+                  child:
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child :  Text(
+                    "Update Profile",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                    
+                    ),
+                
+                ),
+          Divider(),
+          
+          Container(
+                  
+                  child : Column(
+                    children:[
+                       Row(
+                        children: [
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(200, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "ชื่อ",
+                                icon: Icon(Icons.person)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                          ),
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(200, 50)),
+                            child: TextFormField(
+                              decoration: InputDecoration(
+                              hintText: "นามสกุล",
+                              icon: Icon(Icons.person)),
+                              onSaved: (String? value) {
+                                print('Value for field saved');
+                              },
+                            ),
+                          ),
+                         ),
+                      ConstrainedBox(
+                        
+                        constraints: BoxConstraints.tight(const Size(400, 50)),
+                        child:  TextFormField(
+                              decoration: InputDecoration(
+                              hintText: "เลขประจำตัวประชาชน",
+                              icon: Icon(Icons.card_membership)),
+                              onSaved: (String? value) {
+                                print('Value for field saved');
+                              },
+                            ),
+                      
+                      ),
+                    
+                    ],
+                  ),
+                      
+                      Row(
+                        children: [
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "ชื่อผู้ใช้งาน",
+                                icon: Icon(Icons.person)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                          ),
+                          
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "เพศ",
+                                icon: Icon(Icons.person)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                          ),
+                          
+                        ],
+                       ),
+                      
+                      Row(
+                        children: [
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "อีเมล",
+                                icon: Icon(Icons.email)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                          ),
+                          
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "โทรศัพท์มือถือ",
+                                icon: Icon(Icons.phone)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                          ),
+                          
+                        ],
+                       ),
+                      
+                    
+                      
+                      Row(
+                        children: [
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child :
+                              Container(
+                                child: Icon(Icons.card_membership),
+                              ),
+                          ),
+                          
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(360, 50)),
+                              child: DropdownButton(
+                                isExpanded : true,
+                                value: _value,
+                                items: [
+                                  DropdownMenuItem(
+                                    child: Text("Identificate card"),
+                                    value: 1,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: Text("Passport"),
+                                    value: 2,
+                                  ),
+                                  DropdownMenuItem(
+                                    child: Text("Driving license"),
+                                    value: 3
+                                  )
+                                ],
+                                hint: Text("ID Type"),
+                                onChanged: (value) {
+                                  setState(() {
+                                    _value = 2;
+                                  });
+                                }),
+                            ),
+                          ),
+                          
+                          Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "ที่อยู่",
+                                icon: Icon(Icons.home_filled)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                          ),
+                          
+                        ],
+                       ),
+                      
+                      Row(
+                        children :[
+                          Padding(
+                       padding: const EdgeInsets.all(8.0),
+                       child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(100, 50)),
+                               child:  TextButton(
+                                        child: Text('ยืนยันข้อมูล'),
+                                        style: TextButton.styleFrom(
+                                          primary: Colors.white,
+                                          backgroundColor: Colors.teal,
+                                          onSurface: Colors.grey,
+                                        ),
+                                        onPressed: () {
+                                          print('Pressed');
+                               }),
+                            ),
+                       ),
+                        ]
+                      ),
+                      
+                    ],
+                    
+                  ),
+
+                ),
+        ],
+      ),
+    ),
+    ),
+    )]
+      )));
+     
+  }
+}
