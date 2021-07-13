@@ -39,104 +39,10 @@ class _MyWidgetState extends  State<MyWidget> {
       
       SingleChildScrollView(
         child:(
-      // Change password
+     
       Column(
         children : [
-      
-      Container(
-        width: 860,
-        child:(
-          Card(
-            child:
-              IntrinsicHeight(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Container(
-                  width: double.infinity,
-                  child:
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child :  Text(
-                    "Change password",
-                    textAlign: TextAlign.left,
-                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-                  ),
-                    
-                    ),
-                
-                ),
-          Divider(),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child:  ConstrainedBox(
-                            constraints: BoxConstraints.tight(const Size(400, 50)),
-                              child: TextFormField(
-                                decoration: InputDecoration(
-                                hintText: "Current Password",
-                                icon: Icon(Icons.vpn_key)),
-                                onSaved: (String? value) {
-                                  print('Value for field saved');
-                                },
-                              ),
-                            ),
-                    ),
-                    
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child:  ConstrainedBox(
-                            constraints: BoxConstraints.tight(const Size(400, 50)),
-                              child: TextFormField(
-                                decoration: InputDecoration(
-                                hintText: "New Password",
-                                icon: Icon(Icons.vpn_key)),
-                                onSaved: (String? value) {
-                                  print('Value for field saved');
-                                },
-                              ),
-                            ),
-                    ),
-                    
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child:  ConstrainedBox(
-                            constraints: BoxConstraints.tight(const Size(400, 50)),
-                              child: TextFormField(
-                                decoration: InputDecoration(
-                                hintText: "Confirm Password",
-                                icon: Icon(Icons.vpn_key)),
-                                onSaved: (String? value) {
-                                  print('Value for field saved');
-                                },
-                              ),
-                            ),
-                    ),
-                    
-                    Padding(
-                       padding: const EdgeInsets.all(8.0),
-                       child:  ConstrainedBox(
-                            constraints: BoxConstraints.tight(const Size(100, 50)),
-                               child:  TextButton(
-                                        child: Text('ยืนยันข้อมูล'),
-                                        style: TextButton.styleFrom(
-                                          primary: Colors.white,
-                                          backgroundColor: Colors.teal,
-                                          onSurface: Colors.grey,
-                                        ),
-                                        onPressed: () {
-                                          print('Pressed');
-                               }),
-                            ),
-                       ),
-                     
-                    
-                  ]
-                )
-              )
-          )
-        )
-      ),
-      
+
       // Update profile
       
       Container(
@@ -374,7 +280,103 @@ class _MyWidgetState extends  State<MyWidget> {
       ),
     ),
     ),
-    )]
+    ),
+         // Change password
+        Container(
+        width: 860,
+        child:(
+          Card(
+            child:
+              IntrinsicHeight(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Container(
+                  width: double.infinity,
+                  child:
+                    Padding(
+                      padding: const EdgeInsets.all(10.0),
+                      child :  Text(
+                    "Change password",
+                    textAlign: TextAlign.left,
+                    style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  ),
+                    
+                    ),
+                
+                ),
+          Divider(),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "Current Password",
+                                icon: Icon(Icons.vpn_key)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "New Password",
+                                icon: Icon(Icons.vpn_key)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                    ),
+                    
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(400, 50)),
+                              child: TextFormField(
+                                decoration: InputDecoration(
+                                hintText: "Confirm Password",
+                                icon: Icon(Icons.vpn_key)),
+                                onSaved: (String? value) {
+                                  print('Value for field saved');
+                                },
+                              ),
+                            ),
+                    ),
+                    
+                    Padding(
+                       padding: const EdgeInsets.all(8.0),
+                       child:  ConstrainedBox(
+                            constraints: BoxConstraints.tight(const Size(100, 50)),
+                               child:  TextButton(
+                                        child: Text('ยืนยันข้อมูล'),
+                                        style: TextButton.styleFrom(
+                                          primary: Colors.white,
+                                          backgroundColor: Colors.teal,
+                                          onSurface: Colors.grey,
+                                        ),
+                                        onPressed: () {
+                                          print('Pressed');
+                               }),
+                            ),
+                       ),
+                     
+                    
+                  ]
+                )
+              )
+          )
+        )
+      ),
+        
+        ]
       )));
      
   }
